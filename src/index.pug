@@ -1,4 +1,9 @@
-include /includes/header.pug
-ul
-    li 
-        a
+extends layout/layout.pug
+block pagetitle
+    title Expo Меню
+block content
+    main.d-flex.align-items-center.justify-content-center.h-100
+        ul
+            each val in ['1.1']
+                li 
+                    a(href="val")='Панель ' + val

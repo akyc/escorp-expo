@@ -4,7 +4,7 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Expo
+        block pagetitle
         link(href="scss/styles.scss" rel="stylesheet")
         script(type="module" src="js/main.js")
     body
@@ -14,4 +14,8 @@ html(lang="ru")
                     .col
                         a(href="https://minimir.ru/")
                            img.logotype(src="https://minimir.ru/images/landings/strotskis-group-club/strotskis-group.svg", alt="strotskis-group")
-        include footer.pug 
+        block content
+        footer.footer
+            .container-fluid
+                .row 
+                    p 2012
