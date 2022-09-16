@@ -5,7 +5,7 @@
   "main": "index.js",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel serve src/*.pug --public-url / --dist-dir dist",
+    "start": "parcel src/*.pug && cp -R src/images dist/",
     "build": "parcel build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

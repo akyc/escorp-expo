@@ -1,0 +1,43 @@
+extends ../src/layout/layout.pug
+block pagetitle
+    title Панель 1.2
+block content
+    main
+        .container-fluid
+            .row
+                .col-12.py-3
+                    h2 Панель 1.2
+                .col
+                    .table-responsive
+                        table(class="table table-borderless table-sm")
+                            tr
+                                each span, code in {'a061032':1,'a060122':1,'a060760':1,'a033490':1,'a033491':1,'a056232':1,'':1,'':1,'a055638':2,'a055634':2}
+                                    if code == ''
+                                        td
+                                    else
+                                        td(rowspan=span > 1? span: '' colspan=['a060122', 'a060760'].indexOf(code) != -1 ? '2': '')
+                                                a(href=['a061032', 'a060760'].indexOf(code) != -1 ? "./new.pug#"+code : "https://minimir.ru/nomenclature/composite/1"+code target="_blank")
+                                                    img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg"
+                                                    class="img-fluid" alt=code)
+                            tr
+                                each code in ['a057634','a049709','a049710','a049717','a049718','a057008','a057009','a058260','a056234', '']
+                                    if code == ''
+                                        td
+                                    else
+                                        td
+                                            a(href="https://minimir.ru/nomenclature/composite/1"+code target="_blank")
+                                                img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg"
+                                                class="img-fluid" alt=code)
+                            tr
+                                each span, code in {'a057942':1,'a049712':2,'a049714':2,'a049720':2,'a049721':2,'a032624':1,'a032625':1,'a058478':1,'a061043':1,'a056233':2,'a055632':1,'a055636':1,}
+                                    td(rowspan=span > 1? span: '')
+                                            a(href=['a061043'].indexOf(code) != -1 ? "./new.pug#"+code : "https://minimir.ru/nomenclature/composite/1"+code target="_blank")
+                                                img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg"
+                                                class="img-fluid" alt=code)
+                            tr
+                                each span, code in {'':1,'':1,'a06094':1,'a032624':1,'a032625':1,'a058478':1,'a061043':1,'a056233':2,'a055632':1,'a055636':1,}
+                                    td(rowspan=span > 1? span: '')
+                                            a(href=['a061043'].indexOf(code) != -1 ? "./new.pug#"+code : "https://minimir.ru/nomenclature/composite/1"+code target="_blank")
+                                                img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg"
+                                                class="img-fluid" alt=code)
+            

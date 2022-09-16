@@ -5,8 +5,8 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         block pagetitle
-        link(href="scss/styles.scss" rel="stylesheet")
-        script(type="module" src="js/main.js")
+        link(href="~/src/scss/styles.scss" rel="stylesheet")
+        script(type="module" src="~/src/js/main.js")
     body
         header.header.py-2
             .container-fluid
@@ -14,8 +14,12 @@ html(lang="ru")
                     .col
                         a(href="https://minimir.ru/")
                            img.logotype(src="https://minimir.ru/images/landings/strotskis-group-club/strotskis-group.svg", alt="strotskis-group")
+                    .col 
+                        a(href="/") Меню 
         block content
         footer.footer
             .container-fluid
-                .row 
-                    p 2012
+                .row
+                    .col 
+                        small 2022
+                    

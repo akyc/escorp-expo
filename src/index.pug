@@ -1,9 +1,9 @@
-extends layout/layout.pug
+extends ../src/layout/layout.pug
 block pagetitle
     title Expo Меню
 block content
     main.d-flex.align-items-center.justify-content-center.h-100
-        ul
-            each val in ['1.1']
+        ul.unstyled
+            each val in ['1.1', '1.2']
                 li 
-                    a(href="val")='Панель ' + val
+                    a(href=val+'.pug')='Панель ' + val
