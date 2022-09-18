@@ -1,0 +1,10 @@
+mixin row(array)
+    tr
+        each item in array
+            if item.c == ''
+                td
+            else
+                td(rowspan=item.rs > 1? item.rs: '' colspan=item.cs > 1 ? item.cs : '')
+                    a(href=item.n ? "https://minimir.ru/expo/new.html#"+item.c : "https://minimir.ru/nomenclature/composite/1"+item.c target="_blank")
+                        img(src=item.n ? "https://minimir.ru/expo/images/"+item.c + ".jpg" : "https://eurosvet.info/catalog/images/products/preview/1" + item.c + "_0001.jpg"
+                        class="img-fluid" alt=item.c)

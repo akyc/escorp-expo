@@ -1,0 +1,21 @@
+extends ../src/layout/layout.pug
+block variables
+    - var row1 = [{'c': 'a058494', 'rs': null, 'cs': null, 'n': null},{'c': 'a053081', 'rs': null, 'cs': null, 'n': null},{'c': 'a050335', 'rs': null, 'cs': null, 'n': null},{'c': 'a050115', 'rs': null, 'cs': null, 'n': null},{'c': 'a052740', 'rs': null, 'cs': null, 'n': null},{'c': 'a058979', 'rs': null, 'cs': null, 'n': null},{'c': 'a043954', 'rs': null, 'cs': null, 'n': null},{'c': 'a038823', 'rs': null, 'cs': null, 'n': null},{'c': 'a056311', 'rs': null, 'cs': null, 'n': null},{'c': 'a055774', 'rs': null, 'cs': null, 'n': null}]
+    - var row2 = [{'c': 'a058495', 'rs': null, 'cs': null, 'n': null},{'c': 'a053083', 'rs': null, 'cs': null, 'n': null},{'c': 'a051740', 'rs': null, 'cs': null, 'n': null},{'c': 'a050117', 'rs': null, 'cs': null, 'n': null},{'c': 'a052742', 'rs': null, 'cs': null, 'n': null},{'c': 'a058982', 'rs': 2, 'cs': null, 'n': null},{'c': 'a043953', 'rs': null, 'cs': null, 'n': null},{'c': 'a055777', 'rs': null, 'cs': 2, 'n': null},{'c': 'a055775', 'rs': null, 'cs': null, 'n': null}]
+    - var row3 = [{'c': 'a053079', 'rs': null, 'cs': null, 'n': null},{'c': 'a053078', 'rs': null, 'cs': null, 'n': null},{'c': 'a050336', 'rs': null, 'cs': null, 'n': null},{'c': 'a050116', 'rs': null, 'cs': null, 'n': null},{'c': 'a052741', 'rs': null, 'cs': null, 'n': null},{'c': 'a047883', 'rs': null, 'cs': null, 'n': null},{'c': 'a055776', 'rs': null, 'cs': 2, 'n': null},{'c': 'a055772', 'rs': null, 'cs': null, 'n': null}]
+    - var row4 = [{'c': 'a047871', 'rs': null, 'cs': null, 'n': null},{'c': 'a047855', 'rs': null, 'cs': null, 'n': null},{'c': 'a047873', 'rs': null, 'cs': null, 'n': null},{'c': 'a047874', 'rs': null, 'cs': null, 'n': null},{'c': 'a047872', 'rs': null, 'cs': null, 'n': null},{'c': 'a058986', 'rs': null, 'cs': null, 'n': null},{'c': 'a047884', 'rs': null, 'cs': null, 'n': null},{'c': 'a043955', 'rs': null, 'cs': null, 'n': null},{'c': 'a038440', 'rs': null, 'cs': null, 'n': null},{'c': 'a055773', 'rs': null, 'cs': null, 'n': null}]
+block pagetitle
+    title Панель 5.3
+block content
+    main
+        .container-fluid
+            .row
+                .col-12.py-3
+                    h2 Панель 5.3
+                .col
+                    .table-responsive
+                        table(class="table table-borderless table-sm")
+                            +row(row1)
+                            +row(row2)
+                            +row(row3)
+                            +row(row4)

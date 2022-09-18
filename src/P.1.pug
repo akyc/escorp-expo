@@ -1,0 +1,16 @@
+extends ../src/layout/layout.pug
+block variables
+    - var row1 = [{'c': 'a059887', 'rs': null, 'cs': null, 'n': null},{'c': 'a055958', 'rs': null, 'cs': null, 'n': null},{'c': 'a058953', 'rs': null, 'cs': null, 'n': null},{'c': 'a058954', 'rs': null, 'cs': null, 'n': 1},{'c': 'a061328', 'rs': null, 'cs': null, 'n': null},{'c': 'a061423', 'rs': null, 'cs': null, 'n': null},{'c': 'a061424', 'rs': null, 'cs': null, 'n': null},{'c': 'a061425', 'rs': null, 'cs': null, 'n': null},{'c': 'a061426', 'rs': null, 'cs': null, 'n': null},{'c': 'Pacific_NEW', 'rs': null, 'cs': null, 'n': null},{'c': 'Candle_NEW', 'rs': null, 'cs': null, 'n': null}]
+block pagetitle
+    title Панель P.1
+block content
+    main
+        .container-fluid
+            .row
+                .col-12.py-3
+                    h2 Панель P.1
+                .col
+                    .table-responsive
+                        table(class="table table-borderless table-sm")
+                            each val in [row1]
+                                +row(val)

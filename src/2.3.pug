@@ -11,7 +11,7 @@ block content
                     .table-responsive
                         table(class="table table-borderless table-sm")
                             tr
-                                each span, code in {'a057136':2,'a057049':2,'a054931':1,'a033490':1,'a038420':1,'a038412':1,'a053447':1,'a056369':1,'a051822':1,'a052619':1}
+                                each span, code in {'a057136':2,'a057049':2,'a054931':1,'a038420':1,'a038412':1,'a053447':1,'a056369':1,'a051822':1,'a052619':1}
                                     if span == 'null'
                                         td
                                     else
@@ -26,12 +26,12 @@ block content
                                         a(href="https://minimir.ru/nomenclature/composite/1"+code target="_blank")
                                             img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg" class="img-fluid" alt=code)
                             tr
-                                each span, code in {'a057133':2,'a057137':2,'a057051':2,'a038417':1,'a051730':1, 'a053449': 1, '': 1}
+                                each span, code in {'a057133':2,'a057137':2,'a057051':2,'a038417':1,'a051730':1, 'a053449': 1, 'a051824': 1, 'a052622':1}
                                     td(rowspan=span > 1? span: '')
                                         a(href="https://minimir.ru/nomenclature/composite/1"+code target="_blank")
                                             img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg" class="img-fluid" alt=code)
                             tr
-                                each span, code in {'a054932':2,'empty-1':null,'a038411':1,'a038417':1,'a051730':1, 'a053449': 1, '': 1}
+                                each span, code in {'a054932':2,'empty-1':null,'a038411':1,'empty-2':null,'a056371':1, 'empty-3': null, 'a052621': 1}
                                     if span == null
                                         td
                                     else
