@@ -1,0 +1,15 @@
+extends ./../layout/layout.pug
+block variables
+    - var row1 = [{'c': '00000084395', 'rs': null, 'cs': null, 'n': null},{'c': 'a049993', 'rs': null, 'cs': null, 'n': null}]
+block pagetitle
+    title Панель 5.2
+block content
+    main
+        .container-fluid
+            .row
+                .col-12.py-3.text-center
+                    h5 Панель 5.2
+                .col
+                    .table-responsive
+                        table(class="table table-borderless table-sm")
+                            +row(row1)

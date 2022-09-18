@@ -1,0 +1,21 @@
+extends ./../layout/layout.pug
+block variables
+    - var row1 = [{ 'c': 'a056313', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a056330', 'rs': 2, 'cs': null, 'n': null }, { 'c': 'a056329', 'rs': 2, 'cs': null, 'n': null }, { 'c': 'a050093', 'rs': 2, 'cs': null, 'n': null }]
+    - var row2 = [{ 'c': 'a056314', 'rs': null, 'cs': null, 'n': null }]
+    - var row3 = [{ 'c': 'a056315', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a056319', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a050092', 'rs': null, 'cs': null, 'n': null }, {'c': 'a050096', 'rs': 2, 'cs': null, 'n': null }]
+    - var row4 = [{ 'c': 'a050264', 'rs': null, 'cs': null, 'n': null },{ 'c': 'a050265', 'rs': null, 'cs': null, 'n': null },{ 'c': 'a050095', 'rs': null, 'cs': null, 'n': null }]
+block pagetitle
+    title Панель 3.4
+    
+block content
+    main
+        .container-fluid
+            .row
+                .col-12.py-3.text-center
+                    h5 Панель 3.4
+                    
+                .col
+                    .table-responsive
+                        table(class="table table-borderless table-sm")
+                            each val in [row1,row2,row3,row4]
+                                +row(val)

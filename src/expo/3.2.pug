@@ -1,0 +1,19 @@
+extends ./../layout/layout.pug
+block variables
+    - var row1 = [{'c': 'a057755', 'rs': null, 'cs': null, 'n': null}, {'c': 'a057756', 'rs': null, 'cs': null, 'n': null}, {'c': 'a057086', 'rs': null, 'cs': null, 'n': null}, {'c': 'a057085', 'rs': null, 'cs': null, 'n': null}]
+    - var row2 = [{'c': 'a056930', 'rs': null, 'cs': null, 'n': null}, {'c': 'a056926', 'rs': null, 'cs': null, 'n': null}, {'c': 'a057581', 'rs': null, 'cs': null, 'n': null}, {'c': 'a057580', 'rs': null, 'cs': null, 'n': null}]
+    - var row3 = [{'c': 'a060130', 'rs': null, 'cs': null, 'n': 1}, {'c': 'a056383', 'rs': null, 'cs': null, 'n': null}, {'c': 'a056384', 'rs': null, 'cs': null, 'n': null}, {'c': 'a059042', 'rs': null, 'cs': null, 'n': null}]
+    - var row4 = [{'c': 'a058512', 'rs': null, 'cs': null, 'n': null}, {'c': 'a058337', 'rs': null, 'cs': null, 'n': null}, {'c': 'a058338', 'rs': null, 'cs': null, 'n': null}, {'c': 'a060330', 'rs': null, 'cs': null, 'n': 1}]
+block pagetitle
+    title Панель 3.2
+block content
+    main
+        .container-fluid
+            .row
+                .col-12.py-3.text-center
+                    h5 Панель 3.2
+                .col
+                    .table-responsive
+                        table(class="table table-borderless table-sm")
+                            each val in [row1,row2,row3,row4]
+                                +row(val)

@@ -1,0 +1,15 @@
+extends ./../layout/layout.pug
+block variables
+    - var row1 = [{'c': 'a057240', 'rs': null, 'cs': null, 'n': null},{'c': 'a057283', 'rs': null, 'cs': null, 'n': 1},{'c': 'a058150', 'rs': null, 'cs': null, 'n': 1},{'c': 'a057568', 'rs': null, 'cs': null, 'n': 1},{'c': 'a056331', 'rs': null, 'cs': null, 'n': null},{'c': 'a056332', 'rs': null, 'cs': null, 'n': null},{'c': 'a056600', 'rs': null, 'cs': null, 'n': null},{'c': 'a056593', 'rs': null, 'cs': null, 'n': null},{'c': 'a052293', 'rs': null, 'cs': null, 'n': null},{'c': 'a052302', 'rs': null, 'cs': null, 'n': null}]
+block pagetitle
+    title Панель T
+block content
+    main
+        .container-fluid
+            .row
+                .col-12.py-3.text-center
+                    h5 Панель T
+                .col
+                    .table-responsive
+                        table(class="table table-borderless table-sm")
+                            +row(row1)

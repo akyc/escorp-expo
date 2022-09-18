@@ -1,0 +1,35 @@
+extends ./../layout/layout.pug
+block pagetitle
+    title Панель 7.1
+block content
+    main
+        .container-fluid
+            .row
+                .col-12.py-3.text-center
+                    h5 Панель 7.1
+                .col
+                    .table-responsive
+                        table(class="table table-borderless table-sm")
+                            tr
+                                each code in ['a061831', 'a061833', 'a058951', 'a058947', 'a058944', 'a058948', 'a051703', 'a059108', 'a057392', 'a056161', 'a060136', 'a060137', 'a060781', 'a060782', 'a058317']
+                                    if code == ''
+                                        td
+                                    else
+                                        td(rowspan=span > 1? span: '')
+                                            a(href=code == 'a061364' ? "./new.pug#"+code : "https://minimir.ru/nomenclature/composite/1"+code target="_blank")
+                                                img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg" class="img-fluid" alt=code)
+                            tr
+                                each span, code in {'a059100':2, 'a059101':2, 'a058946':1, 'a058950':1, 'a051699':1, 'a059110':1, 'a057393':1, 'a056160':1, 'a058689':2, 'a060718':2, 'a058318':1}
+                                    td(colspan=span > 1? span: '')
+                                        a(href="https://minimir.ru/nomenclature/composite/1"+code target="_blank")
+                                            img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg"
+                                            class="img-fluid" alt=code)
+                            tr 
+                                each span, code  in {'a059099':2, 'a059096':2, 'a058945':1, 'a058949':1, 'a051698':1, 'a059109':1, 'a057394':1, 'a056159':1, 'a058688':2, 'a060717':2, 'a058316':1}
+                                    if code == ''
+                                        td
+                                    else
+                                        td(colspan=span > 1? span: '')
+                                            a(href="https://minimir.ru/nomenclature/composite/1"+code target="_blank" title=code)
+                                                img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg" class="img-fluid" alt=code)
+            

@@ -1,14 +1,16 @@
-extends ../src/layout/layout.pug
+extends layout/layout.pug
 block pagetitle
     title Expo Меню
 block content
     main.d-flex.align-items-center.justify-content-center.h-100
-        ul.list-unstyled.me-5
-            each val in ['1.1', '1.2', '2.1', '2.3', '5.1', '5.3', '7.1', '7.2', '7.3','P.1','P.6']
-                li 
-                    a(href=val+'.pug')='Панель ' + val
-        ul.list-unstyled
-            each val in ['3.1', '3.2', '3.3', '3.4', '4.1', '4.2', '5.2',  '6.1', '6.2', '6.3', '6,4',  'P.2', 'P.3', 'P.4 + P.5 = P.5',]
-                li='Панель ' + val
+        ul.list-unstyled.main-list
+            each val in ['1.1','1.2','2.1','2.3','3.1','3.2','3.3','3.4','3.5','4.1','4.2','5.1','5.2','5.3','6.1','6.3','6.4','7.1','7.2','7.3','P.1','P.2','P.3','P.5','P.6', 'T']
+                li.p-1 
+                    a.p-3(href='././expo/'+val+'.pug')='Панель ' + val
+    .container
+        .row 
+            .col 
+                div.alert.alert-primary
+                    p Нет фото: a062038, a062028, a062034, Candle_NEW, Pacific_NEW, NEW 356/6, 60142/6 хром, 60135/5 латунь, a061937, a061955, a061944, a06189, a061290, a062038, Wing NEW, Realto NEW, a061412,a061411, Yolo NEW, Tybee NEW, Watford NEW * 3,
 
-        p Нет фото: a062038 a062028 a062034
+                    p Панель 6.2 пустая?

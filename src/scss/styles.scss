@@ -10,13 +10,22 @@ td {
     background-color: #eaeaea!important;
     vertical-align: middle;
     border: 3px solid #fff;
+    max-width: 150px;
+    min-height: 150px;
     & > a {
         display: inline-block;
     }
 }
-
 img {
     max-width: 150px!important;
+}
+.main-list{
+    columns: 3;
+}
+.offcanvas-body{
+    ul{
+        columns: 2;
+    }
 }
 .footer{
     margin-top: auto;

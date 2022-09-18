@@ -1,11 +1,11 @@
 {
-  "name": "expo",
+  "name": "escorp-expo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Exhibition navigator",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel src/index.pug && cp -R src/images dist/",
-    "build": "parcel build src/index.pug",
+    "start": "parcel src/index.pug && mkdir dist && cp -R src/images dist/",
+    "build": "parcel build src/index.pug && cp -R src/images dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

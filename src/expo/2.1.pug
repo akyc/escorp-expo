@@ -1,0 +1,33 @@
+extends ./../layout/layout.pug
+block pagetitle
+    title Панель 2.1
+block content
+    main
+        .container-fluid
+            .row
+                .col-12.py-3.text-center
+                    h5 Панель 2.1
+                .col
+                    .table-responsive
+                        table(class="table table-borderless table-sm")
+                            tr
+                                each span, code in {'1': '', '2': '', '3': '', '4': '', '5': '', '6': '', '7': '', '00000082767': 1}
+                                    if span == ''
+                                        td
+                                    else
+                                        td(rowspan=span > 1? span: '')
+                                            a(href=code == 'a061364' ? "./new.pug#"+code : "https://minimir.ru/nomenclature/composite/1"+code target="_blank")
+                                                img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg" class="img-fluid" alt=code)
+                            tr
+                                each code in ['a058466','a059254','a049362','a055854','a049361','a055855','a058460','00000082768']
+                                    td
+                                        a(href="https://minimir.ru/nomenclature/composite/1"+code target="_blank")
+                                            img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg"
+                                            class="img-fluid" alt=code)
+                            tr 
+                                each code in ['a058467', 'a058070', 'a058069', 'a059251', 'a058069', 'a058068', 'a058461', '00000084966']
+                                    td
+                                        a(href="https://minimir.ru/nomenclature/composite/1"+code target="_blank" title=code)
+                                            img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg"
+                                            class="img-fluid" alt=code)
+            

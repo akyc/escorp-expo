@@ -1,0 +1,43 @@
+extends ./../layout/layout.pug
+block pagetitle
+    title Панель P.6
+block content
+    main
+        .container-fluid
+            .row
+                .col-12.py-3.text-center
+                    h5 Панель P.6
+                .col
+                    .table-responsive
+                        table(class="table table-borderless table-sm")
+                            tr
+                                each code in ['a057111', '', '', '', 'a060670', 'a062028', 'a062038', 'Оптима-NEW-Netz', 'a061372']
+                                    if code == ''
+                                        td
+                                    else
+                                        td(rowspan=span > 1? span: '')
+                                            a(href=code == 'a061364' ? "./new.pug#"+code : "https://minimir.ru/nomenclature/composite/1"+code target="_blank")
+                                                img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg" class="img-fluid" alt=code)
+                            tr
+                                each code in ['a057070', '', '', '', 'a060897', 'a056957', 'a058413', 'a061367', 'a060837']
+                                    td(colspan=span > 1? span: '')
+                                        a(href="https://minimir.ru/nomenclature/composite/1"+code target="_blank")
+                                            img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg"
+                                            class="img-fluid" alt=code)
+                            tr 
+                                each code  in ['a057600', '', '', '', 'a057080', 'a057081', 'a060653', 'a056925', 'a060839']
+                                    if code == ''
+                                        td
+                                    else
+                                        td(colspan=span > 1? span: '')
+                                            a(href="https://minimir.ru/nomenclature/composite/1"+code target="_blank" title=code)
+                                                img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg" class="img-fluid" alt=code)
+                            tr 
+                                each code  in ['Оптима-NEW-Marbella', '', '', '', 'a062034', 'a057400', 'a061400', 'NEW-Подвес-Salut', 'a056966']
+                                    if code == ''
+                                        td
+                                    else
+                                        td(colspan=span > 1? span: '')
+                                            a(href="https://minimir.ru/nomenclature/composite/1"+code target="_blank" title=code)
+                                                img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg" class="img-fluid" alt=code)
+            
