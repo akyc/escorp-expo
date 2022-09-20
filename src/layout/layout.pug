@@ -21,13 +21,19 @@ html(lang="ru")
 
                         div.offcanvas.offcanvas-end(tabindex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel")
                             .offcanvas-header
-                                h5.offcanvas-title(id="offcanvasNavbarLightLabel") Навигация по выставке
+                                h5.offcanvas-title(id="offcanvasNavbarLightLabel") &nbsp;
                                 button(type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close")
                             div.offcanvas-body
+                                h5 Панели
                                 ul.list-unstyled.pe-3
-                                    each val in ['1.1','1.2','2.1','2.3','3.1','3.2','3.3','3.4','3.5','4.1','4.2','5.1','5.2','5.3','6.1','6.3','6.4','7.1','7.2','7.3','P.1','P.2','P.3','P.5','P.6', 'T']
+                                    each val in ['1.1','1.2','2.1','2.3','3.1','3.2','3.3','3.4','3.5','4.1','4.2','5.1','5.2','5.3','6.1','6.3','6.4','7.1','7.2','7.3','t']
                                         li.mb-1
-                                            a(href='~/src/expo/'+val+'.pug' class="nav-link")='Панель ' + val
+                                            a.fs-5(href='~/src/expo/'+val+'.pug' class="nav-link")=val
+                                h5 Потолок
+                                ul.list-unstyled.pe-3
+                                    each val in ['p1','p2','p3','p5','p6']
+                                        li.mb-1
+                                            a.fs-5(href='~/src/expo/'+val+'.pug' class="nav-link")=val
         block content
         footer.footer.py-3.border-top
             .container-fluid

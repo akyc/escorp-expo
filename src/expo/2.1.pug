@@ -1,4 +1,8 @@
 extends ./../layout/layout.pug
+block variables
+    - var row1 = [{ 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': '00000082767', 'rs': null, 'cs': null, 'n': null }]
+    - var row2 = [{ 'c': 'a058466', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a059254', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a049362', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a055854', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a049361', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a055855', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a058460', 'rs': null, 'cs': null, 'n': null }, { 'c': '00000082768', 'rs': null, 'cs': null, 'n': null }]
+    - var row3 = [{ 'c': 'a058467', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a058070', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a058069', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a059251', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a058069', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a058068', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a058461', 'rs': null, 'cs': null, 'n': null }, { 'c': '00000084966', 'rs': null, 'cs': null, 'n': null }]
 block pagetitle
     title Панель 2.1
 block content
@@ -10,24 +14,6 @@ block content
                 .col
                     .table-responsive
                         table(class="table table-borderless table-sm")
-                            tr
-                                each span, code in {'1': '', '2': '', '3': '', '4': '', '5': '', '6': '', '7': '', '00000082767': 1}
-                                    if span == ''
-                                        td
-                                    else
-                                        td(rowspan=span > 1? span: '')
-                                            a(href=code == 'a061364' ? "./new.pug#"+code : "https://minimir.ru/nomenclature/composite/1"+code target="_blank")
-                                                img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg" class="img-fluid" alt=code)
-                            tr
-                                each code in ['a058466','a059254','a049362','a055854','a049361','a055855','a058460','00000082768']
-                                    td
-                                        a(href="https://minimir.ru/nomenclature/composite/1"+code target="_blank")
-                                            img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg"
-                                            class="img-fluid" alt=code)
-                            tr 
-                                each code in ['a058467', 'a058070', 'a058069', 'a059251', 'a058069', 'a058068', 'a058461', '00000084966']
-                                    td
-                                        a(href="https://minimir.ru/nomenclature/composite/1"+code target="_blank" title=code)
-                                            img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg"
-                                            class="img-fluid" alt=code)
+                            each item in [row1,row2,row3]
+                                +row(item)
             

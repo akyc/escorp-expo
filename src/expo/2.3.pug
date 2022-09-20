@@ -1,4 +1,9 @@
 extends ./../layout/layout.pug
+block variables
+    - var row1 = [{ 'c': 'a057136', 'rs': 2, 'cs': 2, 'n': null },{ 'c': 'a057049', 'rs': 2, 'cs': null, 'n': null },{ 'c': 'a054931', 'rs': null, 'cs': null, 'n': null },{ 'c': 'a038420', 'rs': null, 'cs': null, 'n': null },{ 'c': 'a038412', 'rs': null, 'cs': null, 'n': null },{ 'c': 'a053447', 'rs': null, 'cs': null, 'n': null },{ 'c': 'a056369', 'rs': null, 'cs': null, 'n': null },{ 'c': 'a051822', 'rs': null, 'cs': null, 'n': null },{ 'c': 'a052619', 'rs': null, 'cs': null, 'n': null }]
+    - var row2 = [{ 'c': 'a054933', 'rs': 2, 'cs': null, 'n': null }, { 'c': 'a049671', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a038410', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a053448', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a056370', 'rs': 2, 'cs': null, 'n': null }, { 'c': 'a051823', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a052620', 'rs': null, 'cs': null, 'n': null }]
+    - var row3 = [{ 'c': 'a057133', 'rs': 2, 'cs': null, 'n': null }, { 'c': 'a057137', 'rs': 2, 'cs': null, 'n': null }, { 'c': 'a057051', 'rs': 2, 'cs': null, 'n': null }, { 'c': 'a038417', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a051730', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a053449', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a051824', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a052622', 'rs': null, 'cs': null, 'n': null }]
+    - var row4 = [{ 'c': 'a054932', 'rs': 2, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a038411', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a056371', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a052621', 'rs': null, 'cs': null, 'n': null }]
 block pagetitle
     title Панель 2.3
 block content
@@ -10,31 +15,5 @@ block content
                 .col
                     .table-responsive
                         table(class="table table-borderless table-sm")
-                            tr
-                                each span, code in {'a057136':2,'a057049':2,'a054931':1,'a038420':1,'a038412':1,'a053447':1,'a056369':1,'a051822':1,'a052619':1}
-                                    if span == 'null'
-                                        td
-                                    else
-                                        td(rowspan=span > 1? span: '' colspan=['a057136'].indexOf(code) != -1 ? '2': '')
-                                                a(href="https://minimir.ru/nomenclature/composite/1"+code target="_blank")
-                                                    img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg"
-                                                    class="img-fluid" alt=code)
-                            
-                            tr
-                                each span, code in {'a054933':2,'a049671':1,'a038410':1,'a053448':1,'a056370':2, 'a051823': 1, 'a052620': 1}
-                                    td(rowspan=span > 1? span: '')
-                                        a(href="https://minimir.ru/nomenclature/composite/1"+code target="_blank")
-                                            img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg" class="img-fluid" alt=code)
-                            tr
-                                each span, code in {'a057133':2,'a057137':2,'a057051':2,'a038417':1,'a051730':1, 'a053449': 1, 'a051824': 1, 'a052622':1}
-                                    td(rowspan=span > 1? span: '')
-                                        a(href="https://minimir.ru/nomenclature/composite/1"+code target="_blank")
-                                            img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg" class="img-fluid" alt=code)
-                            tr
-                                each span, code in {'a054932':2,'empty-1':null,'a038411':1,'empty-2':null,'a056371':1, 'empty-3': null, 'a052621': 1}
-                                    if span == null
-                                        td
-                                    else
-                                        td(rowspan=span > 1? span: '')
-                                            a(href="https://minimir.ru/nomenclature/composite/1"+code target="_blank")
-                                                img(src="https://eurosvet.info/catalog/images/products/preview/1" + code + "_0001.jpg" class="img-fluid" alt=code)
+                            each item in [row1,row2,row3,row4]
+                                +row(item)
