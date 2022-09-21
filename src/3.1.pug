@@ -1,0 +1,19 @@
+extends layout/layout.pug
+block variables
+    - var row1 = [{'c': 'a058055', 'rs': null, 'cs': null, 'n': null},{'c': 'a060887', 'rs': null, 'cs': null, 'n': 1},{'c': 'a055300', 'rs': null, 'cs': null, 'n': null},{'c': 'a055301', 'rs': null, 'cs': null, 'n': null},{'c': 'a047298', 'rs': null, 'cs': null, 'n': null},{'c': 'a047299', 'rs': null, 'cs': null, 'n': null},{'c': 'a057238', 'rs': null, 'cs': null, 'n': null},{'c': 'a055304', 'rs': null, 'cs': null, 'n': null}]
+    - var row2 = [{'c': 'a058058', 'rs': 2, 'cs': 2, 'n': null}, {'c': 'a060888', 'rs': 2, 'cs': 2, 'n': 1}, {'c': 'a058712', 'rs': null, 'cs': null, 'n': null}, {'c': 'a058713', 'rs': null, 'cs': null, 'n': null}, {'c': 'a060646', 'rs': null, 'cs': null, 'n': 1}, {'c': 'a049111', 'rs': null, 'cs': null, 'n': null}]
+    - var row3 = [{'c': 'a055297', 'rs': null, 'cs': null, 'n': null}, {'c': 'a057290', 'rs': null, 'cs': null, 'n': null}, {'c': 'a057227', 'rs': null, 'cs': null, 'n': null}, {'c': 'a050163', 'rs': null, 'cs': null, 'n': null}]
+    - var row4 = [{'c': 'a050348', 'rs': null, 'cs': null, 'n': null},{'c': 'a050350', 'rs': null, 'cs': null, 'n': null},{'c': 'a052686', 'rs': null, 'cs': null, 'n': null},{'c': 'a052682', 'rs': null, 'cs': null, 'n': null},{'c': 'a055303', 'rs': null, 'cs': null, 'n': null},{'c': 'a051911', 'rs': null, 'cs': null, 'n': null},{'c': 'a055306', 'rs': null, 'cs': null, 'n': null},{'c': 'a055305', 'rs': null, 'cs': null, 'n': null}]
+block pagetitle
+    title Панель 3.1
+block content
+    main
+        .container-fluid
+            .row
+                .col-12.py-3.text-center
+                    h5 Панель 3.1
+                .col
+                    .table-responsive
+                        table(class="table table-borderless table-sm")
+                            each val in [row1,row2,row3,row4]
+                                +row(val)

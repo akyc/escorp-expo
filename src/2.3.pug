@@ -1,0 +1,19 @@
+extends layout/layout.pug
+block variables
+    - var row1 = [{ 'c': 'a057136', 'rs': 2, 'cs': 2, 'n': null },{ 'c': 'a057049', 'rs': 2, 'cs': null, 'n': null },{ 'c': 'a054931', 'rs': null, 'cs': null, 'n': null },{ 'c': 'a038420', 'rs': null, 'cs': null, 'n': null },{ 'c': 'a038412', 'rs': null, 'cs': null, 'n': null },{ 'c': 'a053447', 'rs': null, 'cs': null, 'n': null },{ 'c': 'a056369', 'rs': null, 'cs': null, 'n': null },{ 'c': 'a051822', 'rs': null, 'cs': null, 'n': null },{ 'c': 'a052619', 'rs': null, 'cs': null, 'n': null }]
+    - var row2 = [{ 'c': 'a054933', 'rs': 2, 'cs': null, 'n': null }, { 'c': 'a049671', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a038410', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a053448', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a056370', 'rs': 2, 'cs': null, 'n': null }, { 'c': 'a051823', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a052620', 'rs': null, 'cs': null, 'n': null }]
+    - var row3 = [{ 'c': 'a057133', 'rs': 2, 'cs': null, 'n': null }, { 'c': 'a057137', 'rs': 2, 'cs': null, 'n': null }, { 'c': 'a057051', 'rs': 2, 'cs': null, 'n': null }, { 'c': 'a038417', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a051730', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a053449', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a051824', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a052622', 'rs': null, 'cs': null, 'n': null }]
+    - var row4 = [{ 'c': 'a054932', 'rs': 2, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a038411', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a056371', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a052621', 'rs': null, 'cs': null, 'n': null }]
+block pagetitle
+    title Панель 2.3
+block content
+    main
+        .container-fluid
+            .row
+                .col-12.py-3.text-center
+                    h5 Панель 2.3
+                .col
+                    .table-responsive
+                        table(class="table table-borderless table-sm")
+                            each item in [row1,row2,row3,row4]
+                                +row(item)

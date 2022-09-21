@@ -8,9 +8,9 @@ block content
             ul.list-unstyled.main-list.ms-0.mb-4
                 each val in ['1.1','1.2','2.1','2.3','3.1','3.2','3.3','3.4','3.5','4.1','4.2','5.1','5.2','5.3','6.1','6.3','6.4','7.1','7.2','7.3', 't']
                     li.p-1 
-                        a.p-2.fw-bold.text-decoration-none.fs-5(href='././expo/'+val+'.pug')=val
+                        a.p-2.fw-bold.text-decoration-none.fs-5(href=`${val}.pug`)=val
             h5.text-center Потолок
             ul.list-unstyled.main-list.ms-0.mb-4
                 each val in ['p1','p2','p3','p5','p6']
                     li.p-1 
-                        a.p-2.fw-bold.text-decoration-none.fs-5(href='././expo/'+val+'.pug')=val
+                        a.p-2.fw-bold.text-decoration-none.fs-5(href=`${val}.pug`)=val

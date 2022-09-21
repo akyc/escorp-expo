@@ -1,4 +1,5 @@
 import * as bootstrap from 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.css'
 
 let images = document.querySelectorAll('img')
 for (let image of images) {
@@ -12,11 +13,11 @@ for (let image of images) {
 
 document.addEventListener('DOMContentLoaded', function () {
     let hash = window.location.hash.replace("#", ""),
-        selector = document.querySelector(`[name=${hash}]`);
+        selector = hash && document.querySelector(`[name=${hash}]`);
 
     if (selector) {
         setTimeout(function () {
-            window.scroll(0, selector.offsetTop - 100);
+            //window.scroll(0, selector.offsetTop - 100);
             selector.setAttribute('tabindex', '-1')
             selector.focus()
             node.removeAttribute('tabindex')

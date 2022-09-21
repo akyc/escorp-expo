@@ -1,0 +1,19 @@
+extends layout/layout.pug
+block variables
+    - var row1 = [{ 'c': 'a057111', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a060670', 'rs': null, 'cs': null, 'n': 1 }, { 'c': 'a062028', 'rs': null, 'cs': null, 'n': 1 }, { 'c': 'a062038', 'rs': null, 'cs': null, 'n': 1 }, { 'c': 'Netz_NEW', 'rs': null, 'cs': null, 'n': 1 }, { 'c': 'a061372', 'rs': null, 'cs': null, 'n': 1 }]
+    - var row2 = [{ 'c': 'a057070', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a060897', 'rs': null, 'cs': null, 'n': 1 }, { 'c': 'a056957', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a058413', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a061367', 'rs': null, 'cs': null, 'n': 1 }, { 'c': 'a060837', 'rs': null, 'cs': null, 'n': 1 }]
+    - var row3 = [{ 'c': 'a057600', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a057080', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a057081', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a060653', 'rs': null, 'cs': null, 'n': 1 }, { 'c': 'a056925', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a060839', 'rs': null, 'cs': null, 'n': 1 }]
+    - var row4 = [{ 'c': 'Marbella_NEW', 'rs': null, 'cs': null, 'n': 1 }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': '', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a062034', 'rs': null, 'cs': null, 'n': 1 }, { 'c': 'a057400', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a061400', 'rs': null, 'cs': null, 'n': 1 }, { 'c': 'Salut_NEW', 'rs': null, 'cs': null, 'n': 1 }, { 'c': 'a056966', 'rs': null, 'cs': null, 'n': 1 }]
+block pagetitle
+    title Панель P.6
+block content
+    main
+        .container-fluid
+            .row
+                .col-12.py-3.text-center
+                    h5 Панель P.6
+                .col
+                    .table-responsive
+                        table(class="table table-borderless table-sm")
+                            each item in [row1,row2,row3,row4]
+                                +row(item)

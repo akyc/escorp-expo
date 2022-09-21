@@ -1,4 +1,5 @@
 include ./mixin.pug
+include ./db.pug
 block variables
 doctype html
 html(lang="ru")
@@ -7,7 +8,6 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         block pagetitle
-        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous")
         link(href="~/src/scss/styles.scss" rel="stylesheet")
         script(type="module" src="~/src/js/main.js")
     body
@@ -28,12 +28,12 @@ html(lang="ru")
                                 ul.list-unstyled.pe-3
                                     each val in ['1.1','1.2','2.1','2.3','3.1','3.2','3.3','3.4','3.5','4.1','4.2','5.1','5.2','5.3','6.1','6.3','6.4','7.1','7.2','7.3','t']
                                         li.mb-1
-                                            a.fs-5(href='~/src/expo/'+val+'.pug' class="nav-link")=val
+                                            a.fs-5(href=`${val}.pug` class="nav-link")=val
                                 h5 Потолок
                                 ul.list-unstyled.pe-3
                                     each val in ['p1','p2','p3','p5','p6']
                                         li.mb-1
-                                            a.fs-5(href='~/src/expo/'+val+'.pug' class="nav-link")=val
+                                            a.fs-5(href=`${val}.pug` class="nav-link")=val
         block content
         footer.footer.py-3.border-top
             .container-fluid

@@ -1,0 +1,17 @@
+extends layout/layout.pug
+block variables
+    - var scope = '1.2'
+    - var data = db[scope]
+block pagetitle
+    title=`Панель ${scope}`
+block content
+    main
+        .container-fluid
+            .row
+                .col-12.py-3.text-center
+                    h5=`Панель ${scope}`
+                .col
+                    .table-responsive
+                        table(class="table table-borderless table-sm")
+                            each item in data
+                                +row(item)

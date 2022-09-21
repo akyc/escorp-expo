@@ -1,0 +1,19 @@
+extends layout/layout.pug
+block variables
+    - var row1 = [{'c': 'a059887', 'rs': null, 'cs': 3, 'n': null},{'c': 'a055958', 'rs': null, 'cs': 3, 'n': null},{'c': 'a058953', 'rs': null, 'cs': 2, 'n': 1},{'c': 'a058954', 'rs': null, 'cs': 2, 'n': 1},{'c': 'a061328', 'rs': null, 'cs': 2, 'n': 1},{'c': 'a061423', 'rs': null, 'cs': 2, 'n': 1},{'c': 'a061424', 'rs': null, 'cs': 2, 'n': 1},{'c': 'a061425', 'rs': null, 'cs': 2, 'n': 1},{'c': 'a061426', 'rs': null, 'cs': 2, 'n': 1},{'c': 'Pacific_NEW_bl', 'rs': null, 'cs': null, 'n': 1},{'c': 'Pacific_NEW_sl', 'rs': null, 'cs': 1, 'n': 1},{'c': 'Candle_NEW_bl', 'rs': null, 'cs': null, 'n': 1},{'c': 'Candle_NEW_wh', 'rs': null, 'cs': null, 'n': 1}]
+    - var row2 = [{'c': 'a059252', 'rs': null, 'cs': 3, 'n': null},{'c': 'a059253', 'rs': null, 'cs': 3, 'n': null},{'c': 'a061288', 'rs': null, 'cs': 2, 'n': 1},{'c': 'a061286', 'rs': null, 'cs': 2, 'n': 1},{'c': 'a057450', 'rs': null, 'cs': 2, 'n': null},{'c': 'a057452', 'rs': null, 'cs': 2, 'n': null},{'c': 'a057453', 'rs': null, 'cs': 2, 'n': null},{'c': 'a060827', 'rs': null, 'cs': 2, 'n': 1},{'c': 'a060828', 'rs': null, 'cs': 2, 'n': 1},{'c': 'a060834', 'rs': null, 'cs': 2, 'n': 1},{'c': 'a057154', 'rs': null, 'cs': 2, 'n': null},]
+    - var row3 = [{ 'c': 'a058469', 'rs': null, 'cs': 2, 'n': null }, { 'c': 'a058080', 'rs': null, 'cs': 2, 'n': null }, { 'c': 'a057335', 'rs': null, 'cs': 2, 'n': null }, { 'c': 'a057336', 'rs': null, 'cs': 2, 'n': null }, { 'c': 'a058632', 'rs': null, 'cs': 2, 'n': null }, { 'c': 'a058634', 'rs': null, 'cs': 2, 'n': null }, { 'c': 'a058636', 'rs': null, 'cs': 2, 'n': null }, { 'c': 'a058637', 'rs': null, 'cs': 2, 'n': null }, { 'c': 'a058642', 'rs': null, 'cs': 2, 'n': null }, {'c': 'a056035', 'rs': null, 'cs': 2, 'n': null}, {'c': 'a056838', 'rs': null, 'cs': null, 'n': null}, {'c': 'a060675', 'rs': null, 'cs': null, 'n': null}, {'c': 'a060673', 'rs': null, 'cs': null, 'n': null}, {'c': 'a057473', 'rs': null, 'cs': null, 'n': null}]
+    - var row4 = [{ 'c': 'a055956', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a058066', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a057391', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a057459', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a058956', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a058957', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a061720', 'rs': null, 'cs': null, 'n': 1}, { 'c': 'a060700', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a060522', 'rs': null, 'cs': null, 'n': 1}, { 'c': 'a056847', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a058968', 'rs': null, 'cs': null, 'n': 1}, { 'c': 'a058971', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a058966', 'rs': null, 'cs': null, 'n': 1}, { 'c': 'a058965', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a059258', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a059262', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a058076', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a060588', 'rs': null, 'cs': null, 'n': 1}, { 'c': 'a058498', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a058499', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a058500', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a057462', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a058962', 'rs': null, 'cs': null, 'n': null}, { 'c': 'a058963', 'rs': null, 'cs': null, 'n': null}]
+block pagetitle
+    title Панель P.1
+block content
+    main
+        .container-fluid
+            .row
+                .col-12.py-3.text-center
+                    h5 Панель P.1
+                .col
+                    .table-responsive
+                        table(class="table table-borderless table-sm")
+                            each val in [row1,row2,row3,row4]
+                                +row(val)

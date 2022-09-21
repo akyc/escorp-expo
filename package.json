@@ -4,8 +4,8 @@
   "description": "Exhibition navigator",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel src/index.pug  src/expo/*/pug --open",
-    "build": "parcel build src/index.pug src/expo/*.pug --no-source-maps --no-cache"
+    "start": "parcel src/*.pug --no-source-maps --open",
+    "build": "parcel build src/index.pug src/expo/*.pug --dist-dir build --public-url https://minimir.ru/expo/ --no-cache"
   },
   "keywords": [],
   "author": "",

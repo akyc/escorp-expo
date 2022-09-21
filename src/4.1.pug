@@ -1,0 +1,20 @@
+extends layout/layout.pug
+block variables
+    - var row1 = [{ 'c': 'a055329', 'rs': null, 'cs': null, 'n': null },{'c': 'a055328', 'rs': null, 'cs': null, 'n': null },{'c': 'a043152', 'rs': null, 'cs': null, 'n': null },{'c': 'a055333', 'rs': null, 'cs': null, 'n': 1 },{'c': 'a055334', 'rs': null, 'cs': null, 'n': 1 },{ 'c': 'a055322', 'rs': null, 'cs': null, 'n': null },{ 'c': 'a055317', 'rs': null, 'cs': null, 'n': null },{'c': 'a055326', 'rs': null, 'cs': null, 'n': 1 },{ 'c': 'a055327', 'rs': null, 'cs': null, 'n': 1 },{'c': 'a055331','rs': null, 'cs': null, 'n': null }, { 'c': 'a060127','rs': null, 'cs': null, 'n': 1 }]
+    - var row2 = [{ 'c': 'a055335', 'rs': null, 'cs': null, 'n': 1 }, { 'c': 'a056960', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a055332', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a055337', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a045229', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a044709', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a055338', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a049491', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a045238', 'rs': null, 'cs': null, 'n': null }, { 'c': '00000085986', 'rs': null, 'cs': null, 'n': null }, { 'c': '00000083578', 'rs': null, 'cs': null, 'n': null }]
+    - var row3 = [{ 'c': 'a057239', 'rs': null, 'cs': null, 'n': null }, { 'c': '00000084046', 'rs': null, 'cs': null, 'n': null }, { 'c': '00000086061', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a044189', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a045232', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a045196', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a045211', 'rs': null, 'cs': null, 'n': null }, { 'c': '00000072985', 'rs': null, 'cs': null, 'n': null }, { 'c': 'a043817', 'rs': null, 'cs': null, 'n': null }, { 'c': '00000084934', 'rs': null, 'cs': null, 'n': null }, { 'c': '00000084222', 'rs': null, 'cs': null, 'n': null }]
+block pagetitle
+    title Панель 4.1
+    
+block content
+    main
+        .container-fluid
+            .row
+                .col-12.py-3.text-center
+                    h5 Панель 4.1
+                    
+                .col
+                    .table-responsive
+                        table(class="table table-borderless table-sm")
+                            each val in [row1,row2,row3]
+                                +row(val)
